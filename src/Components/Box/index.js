@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { Box, Slider,
     SliderTrack,
     SliderFilledTrack,
     SliderThumb,
-    SliderMark, } from '@chakra-ui/react'
+    SliderMark, Text,} from '@chakra-ui/react'
 
     function Boxed(){
         const [sliderValue, setSliderValue] = useState(3)

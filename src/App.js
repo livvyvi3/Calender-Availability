@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import ScheduleTable from './Components/ScheduleTable';
+
 
 function App() {
   function checkSlotAvailability(time, jobLength, date, availability) {
@@ -18,7 +19,7 @@ function App() {
     if (jobLength < minJobLen) {
       return 'A job cannot be done within an hour ';
     }
-    // replace the about condition with the slider 
+    // replace the above condition with the slider 
 
     if (time !== bookingHrs[0] && time !== bookingHrs[bookingHrs.length - 1]) {
       if (time !== bookingHrs[1]) {
@@ -41,20 +42,7 @@ function App() {
   }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ScheduleTable></ScheduleTable>
     </div>
   );
 }
